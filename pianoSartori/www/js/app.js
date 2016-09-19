@@ -36,7 +36,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/piano',
     views: {
       'menuContent': {
-        templateUrl: 'templates/piano.html'
+        templateUrl: 'templates/piano.html',
+        controller: 'PianoCtrl'
       }
     }
   })
