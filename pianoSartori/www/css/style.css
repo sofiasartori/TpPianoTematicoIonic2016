@@ -1,1 +1,35 @@
 /* Empty. Add your own CSS if you like */
+
+.botonGatos{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 150px;
+    height: 145px;
+    box-shadow: 5px 5px 10px #D1E0E6;
+}
+
+.botonGatos:active{
+	box-shadow: 5px 5px 10px #E67AB0;	
+}
+
+.tabs .tab-item .icon.account {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url('../img/cat-512.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.piano {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url('../img/Piano-icon.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.about {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url('../img/mood-34-512.png');
+  background-size:contain;
+}
+
