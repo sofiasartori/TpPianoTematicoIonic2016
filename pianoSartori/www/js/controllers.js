@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ionic'])
+angular.module('starter.controllers', ['ionic', 'ngCordova'])
 .factory('login', function () {
     var logueado = false;
     var login = {};
@@ -37,11 +37,36 @@ angular.module('starter.controllers', ['ionic'])
 
   }])
 
-.controller('PianoCtrl', ['$scope', '$state', function ($scope, $state) {
-  //$cordovaNativeAudio.preloadSimple("sonido1", "sounds/sonido1.mp3");
+.controller('PianoCtrl', ['$scope', '$state', '$cordovaVibration', '$cordovaNativeAudio', function ($scope, $state, $cordovaVibration, $cordovaNativeAudio) {
+  $cordovaNativeAudio.preloadSimple("sonido1", "sounds/sonido1.mp3");
+  $cordovaNativeAudio.preloadSimple("sonido2", "sounds/sonido2.mp3");
+  $cordovaNativeAudio.preloadSimple("sonido3", "sounds/sonido3.mp3");
+  $cordovaNativeAudio.preloadSimple("sonido4", "sounds/sonido4.mp3");
+  $cordovaNativeAudio.preloadSimple("sonido5", "sounds/sonido5.mp3");
+  $cordovaNativeAudio.preloadSimple("sonido6", "sounds/sonido6.mp3");
   $scope.boton1 = function(){
-    console.log("hola");
-    //$cordovaNativeAudio.play("sonido1");
+    $cordovaVibration.vibrate(1000);
+    $cordovaNativeAudio.play("sonido1");
+  }
+  $scope.boton2 = function(){
+    $cordovaVibration.vibrate(1000);
+    $cordovaNativeAudio.play("sonido2");
+  }
+  $scope.boton3 = function(){
+    $cordovaVibration.vibrate(1000);
+    $cordovaNativeAudio.play("sonido3");
+  }
+  $scope.boton4 = function(){
+    $cordovaVibration.vibrate(1000);
+    $cordovaNativeAudio.play("sonido4");
+  }
+  $scope.boton5 = function(){
+    $cordovaVibration.vibrate(1000);
+    $cordovaNativeAudio.play("sonido5");
+  }
+  $scope.boton6 = function(){
+    $cordovaVibration.vibrate(1000);
+    $cordovaNativeAudio.play("sonido6");
   }
 }])
 
